@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Jus Nanas",
+      "price": 15000,
+      "category": "Jus",
+      "description": "Jus dengan mengunakan buah Nanas segar,memiliki rasa manis dan asam ",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnwICiZOCX5S3Y3dfO5EIPo73CNA_ORSUxiw&s"
+    },
+    {
+      "id": 2,
+      "name": "Jus Mangga",
+      "price": 15000,
+      "category": "Jus",
+      "description": "Jus dengan mengunakan buah Mangga .",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtcmxvR-LlS3QxKigbOaLgAjV_MVvmYlOVfQ&s"
+    },
+    {
+      "id": 3,
+      "name": "Jus Apel",
+      "price": 15000,
+      "category": "Jus",
+      "description": "Jus yang mengunakan buah apel",
+      "image": "https://siplahtelkom.com/public/products/59046/2363908/e366ca80-d348-4.1619240831.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Jus Alpukat",
+        "price": 15000,
+        "category": "Jus",
+        "description": "Jus mengunakan buah alpukat yang di campur dengan susu",
+        "image": "https://img-global.cpcdn.com/recipes/fa3455ff60fc978e/680x781cq80/jus-alpukat-foto-resep-utama.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Jus Jeruk",
+        "price": 10000,
+        "category": "Jus",
+        "description": "Jus yang mengunakan buah jeruk,Memiliki rasa asam manis yang segar",
+        "image": "https://siplahtelkom.com/public/products/59046/2363887/19de90e1-5036-4.1619240573.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "Jus Buah Naga",
+        "price": 15000,
+        "category": "Jus",
+        "description": "Jus yang menyeramkan narena mengunakan buah naga",
+        "image": "https://i.pinimg.com/736x/f1/13/1f/f1131f46d9a3e5e87cac02c925b69e6b.jpg"
+    },
+    {
+      "id": 7,
+        "name": "Jus Sirsak",
+        "price": 10000,
+        "category": "Jus",
+        "description": "Minuman menyegegarkan dari buah sirsak",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDdMe-8wp0FtUkLZOhlCXHk6a4-lbyOFZHPQ&s"
+    },
+    {
+      "id": 8,
+        "name": "Jus Semangka",
+        "price": 10000,
+        "category": "Jus",
+        "description": "Minuman segar, ringan, dan menyegarkan yang terbuat dari daging buah semangka",
+        "image": "https://cdn.rri.co.id/berita/Lhokseumawe/o/1729064486292-WhatsApp_Image_2024-10-16_at_14.41.01/1aol2s6brul0lbt.jpeg"
+    },
+    {
+      "id": 9,
+        "name": "Jus Melon",
+        "price": 10000,
+        "category": "Jus",
+        "description": "Jus yang terbuat dari ",
+        "image": "https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/6620aae9-aa23-4fdf-97fc-68797f49ec56_Go-Biz_20211004_234531.jpeg"
+    },
+    {
+      "id": 10,
+        "name": "Jus Wortel",
+        "price": 10000,
+        "category": "Jus",
+        "description": "mantap",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd0vOOc1QkfLZK42pZpXcKWNaDv7a_TNyg-A&s"
+    },
+    {
+      "id": 11,
+        "name": "Jus Pepaya",
+        "price": 10000,
+        "category": "Jus",
+        "description": "mantap",
+        "image": "https://assets.pikiran-rakyat.com/crop/0x0:0x0/750x500/photo/2021/10/20/59454758.png"
+    },
+    {
+      "id": 12,
+        "name": "Jus Tomat",
+        "price": 10000,
+        "category": "Jus",
+        "description": "mantap",
+        "image": "https://www.jagel.id/api/listimage/v/JUICE-TOMAT-0-2016037706c15fcb.jpg"
+    }
+  ]
+}
