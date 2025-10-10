@@ -7,7 +7,6 @@ import Beranda from "./pages/Beranda";
 function Home() {
   return (
     <main className="container">
-      <h1 className="text1">Kami Ada Karena Rasa</h1>
       <ProductList />
     </main>
   );
