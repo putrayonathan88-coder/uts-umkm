@@ -5,7 +5,7 @@
       "name": "Jus Nanas",
       "price": 15000,
       "category": "Jus",
-      "description": "Jus dengan mengunakan buah Nanas segar,memiliki rasa manis dan asam ",
+      "description": "Kesegaran tropis dari buah nanas pilihan! Rasa manis dan asamnya berpadu sempurna, siap menyegarkan hari kamu di setiap tegukan. ",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnwICiZOCX5S3Y3dfO5EIPo73CNA_ORSUxiw&s"
     },
     {
@@ -13,7 +13,7 @@
       "name": "Jus Mangga",
       "price": 15000,
       "category": "Jus",
-      "description": "Jus dengan mengunakan buah Mangga .",
+      "description": "Dibuat dari buah mangga matang yang manis alami. Teksturnya lembut, rasa legitnya bikin nagih dari tegukan pertama!",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtcmxvR-LlS3QxKigbOaLgAjV_MVvmYlOVfQ&s"
     },
     {
@@ -21,7 +21,7 @@
       "name": "Jus Apel",
       "price": 15000,
       "category": "Jus",
-      "description": "Jus yang mengunakan buah apel",
+      "description": "Perpaduan segar dan manis khas apel segar yang menyehatkan. Cocok dinikmati kapan pun untuk menambah energi harimu!",
       "image": "https://siplahtelkom.com/public/products/59046/2363908/e366ca80-d348-4.1619240831.jpeg"
     },
     {
@@ -29,7 +29,7 @@
         "name": "Jus Alpukat",
         "price": 15000,
         "category": "Jus",
-        "description": "Jus mengunakan buah alpukat yang di campur dengan susu",
+        "description": "Nikmati kelembutan alpukat premium yang berpadu dengan susu kental manis. Lembut, gurih, dan bikin kenyang!",
         "image": "https://img-global.cpcdn.com/recipes/fa3455ff60fc978e/680x781cq80/jus-alpukat-foto-resep-utama.jpg"
     },
     {
@@ -37,7 +37,7 @@
         "name": "Jus Jeruk",
         "price": 10000,
         "category": "Jus",
-        "description": "Jus yang mengunakan buah jeruk,Memiliki rasa asam manis yang segar",
+        "description": "Sensasi segar dari buah jeruk asli dengan cita rasa asam-manis yang menggoda lidah. Kaya vitamin C untuk daya tahan tubuhmu!",
         "image": "https://siplahtelkom.com/public/products/59046/2363887/19de90e1-5036-4.1619240573.jpeg"
     },
     {
@@ -45,7 +45,7 @@
         "name": "Jus Buah Naga",
         "price": 15000,
         "category": "Jus",
-        "description": "Jus yang menyeramkan narena mengunakan buah naga",
+        "description": "Tampil memukau dengan warna ungu cerah! Rasa manisnya lembut dan kaya antioksidan untuk menjaga tubuh tetap sehat.",
         "image": "https://i.pinimg.com/736x/f1/13/1f/f1131f46d9a3e5e87cac02c925b69e6b.jpg"
     },
     {
@@ -53,7 +53,7 @@
         "name": "Jus Sirsak",
         "price": 10000,
         "category": "Jus",
-        "description": "Minuman menyegegarkan dari buah sirsak",
+        "description": "Segarnya buah sirsak yang lembut berpadu rasa asam-manis alami, memberi sensasi tropis yang menyegarkan!",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDdMe-8wp0FtUkLZOhlCXHk6a4-lbyOFZHPQ&s"
     },
     {
@@ -61,7 +61,7 @@
         "name": "Jus Semangka",
         "price": 10000,
         "category": "Jus",
-        "description": "Minuman segar, ringan, dan menyegarkan yang terbuat dari daging buah semangka",
+        "description": "Minuman dingin paling segar! Rasa manis alami dari daging semangka membuat haus langsung hilang seketika.",
         "image": "https://cdn.rri.co.id/berita/Lhokseumawe/o/1729064486292-WhatsApp_Image_2024-10-16_at_14.41.01/1aol2s6brul0lbt.jpeg"
     },
     {
@@ -69,7 +69,7 @@
         "name": "Jus Melon",
         "price": 10000,
         "category": "Jus",
-        "description": "Jus yang terbuat dari ",
+        "description": "Manis alami buah melon segar yang lembut dan harum. Pilihan sempurna untuk menemani siang yang panas.",
         "image": "https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/6620aae9-aa23-4fdf-97fc-68797f49ec56_Go-Biz_20211004_234531.jpeg"
     },
     {
@@ -77,7 +77,7 @@
         "name": "Jus Wortel",
         "price": 10000,
         "category": "Jus",
-        "description": "mantap",
+        "description": "Kaya vitamin A dan rasa manis alami, jus wortel ini bukan cuma sehat tapi juga nikmat!",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd0vOOc1QkfLZK42pZpXcKWNaDv7a_TNyg-A&s"
     },
     {
@@ -85,7 +85,7 @@
         "name": "Jus Pepaya",
         "price": 10000,
         "category": "Jus",
-        "description": "mantap",
+        "description": "Segar, lembut, dan menyehatkan! Jus pepaya membantu pencernaan dan bikin tubuh terasa ringan.",
         "image": "https://assets.pikiran-rakyat.com/crop/0x0:0x0/750x500/photo/2021/10/20/59454758.png"
     },
     {
@@ -93,7 +93,7 @@
         "name": "Jus Tomat",
         "price": 10000,
         "category": "Jus",
-        "description": "mantap",
+        "description": "Jus sehat dengan cita rasa khas tomat segar. Kaya antioksidan, cocok untuk menjaga daya tahan tubuhmu setiap hari!",
         "image": "https://www.jagel.id/api/listimage/v/JUICE-TOMAT-0-2016037706c15fcb.jpg"
     }
   ]

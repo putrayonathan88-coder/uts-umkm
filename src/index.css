@@ -2,7 +2,7 @@ body {
   top: 0%;
   margin: 0;
   padding: 0 ;
-  background: #fffdf5;
+  background: #fff5cc;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -85,12 +85,6 @@ body {
 
 
 /*stye Card*/
-.cart-btn {
-  background: none;
-  border: none;
-  position: relative;
-}
-
 .cart-count {
   background: red;
   color: white;
@@ -109,12 +103,19 @@ body {
   justify-content: center;
   align-items: start;
   max-width: 1200px;
-  margin: 0 auto; /* agar di tengah */
-  padding-top: 70px;
+  margin: 0 auto; 
+  padding-top: 95px;
 }
 
 .product-section {
   animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  color: #333;
 }
 
 .card {
@@ -160,10 +161,10 @@ body {
   color: #2b2b2b;
 }
 
-/* style About*/
+/* style Beranda*/
 .home-container {
   background: linear-gradient(to bottom right, #ffcc33, #fff5cc);
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,10 +178,17 @@ body {
   animation: fadeIn 1s ease-in-out;
 }
 
+.home-text {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
 .home-title {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 .home-subtitle {
@@ -211,7 +219,7 @@ body {
 
 /*style About*/
 .about-container {
-  background: #fffdf5;
+  background: #fff5cc;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -229,7 +237,7 @@ body {
 .about-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #f9a825;
+  color: #5a3a00;
   margin-bottom: 20px;
 }
 
