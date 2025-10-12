@@ -1,7 +1,7 @@
 import React from 'react'
 import { FiInfo } from 'react-icons/fi'
 
-export default function ProductCard({ product, onOpen }) {
+export default function ProductCard({ product }) {
   return (
     <div className="card">
       <img src={product.image} alt={product.name} className="card-img" />

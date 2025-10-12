@@ -95,6 +95,63 @@
         "category": "Jus",
         "description": "Jus sehat dengan cita rasa khas tomat segar. Kaya antioksidan, cocok untuk menjaga daya tahan tubuhmu setiap hari!",
         "image": "https://www.jagel.id/api/listimage/v/JUICE-TOMAT-0-2016037706c15fcb.jpg"
+    },
+    {
+      "id": 13,
+        "name": "Es Nutri Sari",
+        "price": 5000,
+        "category": "Es",
+        "description": "Minuman segar dengan rasa buah tropis yang manis dan menyegarkan, cocok dinikmati kapan saja.",
+        "image": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/41727540-f239-43b8-8ee0-5c6479d88c85_Go-Biz_20221208_110002.jpeg"
+    },
+    {
+      "id": 14,
+        "name": "Es Kuku Bima Susu",
+        "price": 7000,
+        "category": "Es",
+        "description": "Perpaduan susu lembut dan Kuku Bima yang memberi rasa creamy serta energi instan.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ5G5w4dlsx2DMGMn1dHxEx0NnyW2AuSc0hw&s"
+    },
+    {
+      "id": 15,
+        "name": "Es Extra Joss Susu",
+        "price": 7000,
+        "category": "Es",
+        "description": "JSusu segar berpadu dengan Extra Joss, menghasilkan rasa manis dan segar yang membangkitkan semangat.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhw7vW-qAQ2SaM1T7CWTSOi7ArTGWphXFPJODvxIFNDt9snWcYjVJICXLIxKh-fhPUVwM&usqp=CAU"
+    },
+    {
+      "id": 16,
+        "name": "Es Capcin",
+        "price": 10000,
+        "category": "Es",
+        "description": "Kombinasi cappuccino lembut dan cincau kenyal yang menyegarkan setiap tegukan.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoylqO5O8lCnE6gY-JdEJ2dRKqwNAhUFzU_Q&s"
+    },
+    {
+      "id": 17,
+        "name": "Es Milo",
+        "price": 10000,
+        "category": "Es",
+        "description": "Cokelat Milo dengan rasa manis dan lembut yang bikin segar dan semangat kembali.",
+        "image": "https://i.pinimg.com/736x/52/dc/21/52dc21d8e98918425b8422a258001490.jpg"
+    },
+    {
+      "id": 18,
+        "name": "Es Beng-Beng",
+        "price": 10000,
+        "category": "Es",
+        "description": "Minuman cokelat creamy dengan cita rasa khas Beng-Beng yang nikmat dan menyegarkan.",
+        "image": "https://png.pngtree.com/png-vector/20250307/ourmid/pngtree-chocolate-drink-iced-cup-png-image_15740503.png"
+    },
+    {
+      "id": 19,
+        "name": "Es Oval tine",
+        "price": 10000,
+        "category": "Es",
+        "description": "Rasa malt cokelat yang lembut dan manis, cocok untuk dinikmati saat santai.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVydarejasUQVorx9wHz63_t-7p-VJd-gRqw&s"
     }
+
   ]
 }
