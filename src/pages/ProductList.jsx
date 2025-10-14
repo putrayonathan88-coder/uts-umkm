@@ -19,8 +19,6 @@ export default function ProductList() {
           <ProductCard key={p.id} product={p} onOpen={setSelected} />
         ))}
       </div>
-
-      {selected && <ProductModal product={selected} onClose={() => setSelected(null)} />}
     </div>
   )
 }
