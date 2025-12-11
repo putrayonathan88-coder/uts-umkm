@@ -13,17 +13,29 @@ export default function AdminEditProduct() {
     name: "",
     price: "",
     description: "",
-    image: ""
+    image: "",
   });
 
   const [loading, setLoading] = useState(true);
 
-  // ============================
+  // ==========================
   // LOAD DATA PRODUK BERDASARKAN ID
-  // ============================
+  // ==========================
   useEffect(() => {
+    const token = localStorage.getItem("accessToken");
+
+    if (!token) {
+      toast.error("Session expired, silakan login ulang.");
+      navigate("/admin/login");
+      return;
+    }
+
     api
-      .get(`/products/${id}`)
+      .get(`/products/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`, // FIX
+        },
+      })
       .then((res) => {
         setProduct(res.data);
         setLoading(false);
@@ -32,25 +44,36 @@ export default function AdminEditProduct() {
         toast.error("Gagal memuat data produk");
         setLoading(false);
       });
-  }, [id]);
+  }, [id, navigate]);
 
-  // Handle perubahan pada input
+  // HANDLE INPUT PERUBAHAN
   const handleChange = (e) => {
     setProduct({ ...product, [e.target.name]: e.target.value });
   };
 
-  // ============================
+  // ==========================
   // UPDATE PRODUK
-  // ============================
+  // ==========================
   const updateProduct = async (e) => {
     e.preventDefault();
 
     try {
-      await api.put(`/products/${id}`, product);
+      const token = localStorage.getItem("accessToken");
+
+      if (!token) {
+        toast.error("Session expired. Silakan login ulang.");
+        navigate("/admin/login");
+        return;
+      }
+
+      await api.put(`/products/${id}`, product, {
+        headers: {
+          Authorization: `Bearer ${token}`, // FIX PENTING
+        },
+      });
 
       toast.success("Produk berhasil diperbarui!");
       navigate("/admin/products");
-
     } catch (err) {
       toast.error("Gagal memperbarui produk");
     }
@@ -126,9 +149,9 @@ export default function AdminEditProduct() {
   );
 }
 
-// ============================
-// GAYA / CSS INLINE
-// ============================
+// ==========================
+// CSS INLINE
+// ==========================
 
 const styles = {
   container: {

@@ -8,11 +8,9 @@ export default function AdminProductList() {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
 
-  // ===============================
-  // LOAD PRODUK SAAT HALAMAN DIBUKA
-  // ===============================
+  // LOAD PRODUK SAAT HALAMAN DIBUKA //
   useEffect(() => {
-    const token = localStorage.getItem("adminToken");
+    const token = localStorage.getItem("accessToken"); // FIX
 
     // Jika tidak ada token → paksa ke login
     if (!token) {
@@ -20,17 +18,19 @@ export default function AdminProductList() {
       return;
     }
 
-    fetch(`${BASE_URL}/products`)
-      .then(res => res.json())
-      .then(data => setProducts(data))
-      .catch(err => console.log(err));
+    fetch(`${BASE_URL}/products`, {
+      headers: {
+        Authorization: `Bearer ${token}`, // FIX
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => setProducts(data))
+      .catch((err) => console.log(err));
   }, []);
 
-  // ===============================
-  // FUNGSI DELETE PRODUK
-  // ===============================
+  // FUNGSI DELETE PRODUK //
   const deleteProduct = async (id) => {
-    const token = localStorage.getItem("adminToken");
+    const token = localStorage.getItem("accessToken"); // FIX
 
     if (!window.confirm("Yakin ingin menghapus produk ini?")) return;
 
@@ -38,20 +38,19 @@ export default function AdminProductList() {
       const res = await fetch(`${BASE_URL}/products/${id}`, {
         method: "DELETE",
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${token}`, // FIX
         },
       });
 
       if (res.ok) {
         // Hapus dari state
-        setProducts(products.filter(p => p.id !== id));
+        setProducts(products.filter((p) => p.id !== id));
 
         // NOTIFIKASI BERHASIL
         toast.success("Produk berhasil dihapus!");
       } else {
         toast.error("Gagal menghapus produk!");
       }
-
     } catch (err) {
       toast.error("Terjadi kesalahan saat menghapus produk");
       console.log(err);
@@ -73,7 +72,7 @@ export default function AdminProductList() {
             color: "white",
             borderRadius: 6,
             marginBottom: 20,
-            cursor: "pointer"
+            cursor: "pointer",
           }}
           onClick={() => navigate("/admin/add")}
         >
@@ -90,7 +89,7 @@ export default function AdminProductList() {
               borderRadius: 8,
               marginBottom: 15,
               background: "white",
-              boxShadow: "0 2px 6px rgba(0,0,0,0.1)"
+              boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
             }}
           >
             <h2>{p.name}</h2>
@@ -104,7 +103,7 @@ export default function AdminProductList() {
                 padding: "6px 12px",
                 marginRight: 10,
                 borderRadius: 6,
-                cursor: "pointer"
+                cursor: "pointer",
               }}
               onClick={() => navigate(`/admin/products/${p.id}/edit`)}
             >
@@ -118,7 +117,7 @@ export default function AdminProductList() {
                 color: "white",
                 padding: "6px 12px",
                 borderRadius: 6,
-                cursor: "pointer"
+                cursor: "pointer",
               }}
               onClick={() => deleteProduct(p.id)}
             >

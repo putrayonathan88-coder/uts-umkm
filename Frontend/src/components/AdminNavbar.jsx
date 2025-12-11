@@ -4,7 +4,10 @@ export default function AdminNavbar() {
   const navigate = useNavigate();
 
   const logout = () => {
-    localStorage.removeItem("adminToken");
+    // HAPUS TOKEN YANG BENAR
+    localStorage.removeItem("accessToken");
+
+    // Redirect ke login
     navigate("/admin/login");
   };
 
@@ -17,7 +20,7 @@ export default function AdminNavbar() {
           <h2 className="admin-logo">Admin Panel</h2>
         </div>
 
-        {/* TENGAH */}
+        {/* MENU TENGAH */}
         <ul className="admin-nav-links">
           <li><Link to="/admin/products">Produk</Link></li>
           <li><Link to="/admin/add">Tambah Produk</Link></li>

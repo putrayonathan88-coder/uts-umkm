@@ -1,8 +1,6 @@
 const db = require("../config/db");
 
-// =========================
-// GET Semua Produk
-// =========================
+// GET Semua Produk//
 function getAll(req, res) {
   db.query("SELECT * FROM products ORDER BY id DESC", (err, rows) => {
     if (err) {
@@ -12,9 +10,7 @@ function getAll(req, res) {
   });
 }
 
-// =========================
-// GET Produk berdasarkan ID
-// =========================
+// GET Produk berdasarkan ID//
 function getById(req, res) {
   const id = req.params.id;
 
@@ -30,9 +26,7 @@ function getById(req, res) {
   });
 }
 
-// =========================
-// CREATE Produk Baru (Admin)
-// =========================
+// CREATE Produk Baru (Admin)//
 function create(req, res) {
   const { name, price, description } = req.body;
 
@@ -67,9 +61,7 @@ function create(req, res) {
   });
 }
 
-// =========================
-// UPDATE Produk berdasarkan ID (Admin)
-// =========================
+// UPDATE Produk berdasarkan ID (Admin)//
 function update(req, res) {
   const id = req.params.id;
   const { name, price, description } = req.body;
@@ -120,9 +112,7 @@ function update(req, res) {
   });
 }
 
-// =========================
-// DELETE Produk berdasarkan ID
-// =========================
+// DELETE Produk berdasarkan ID//p
 function remove(req, res) {
   const id = req.params.id;
 

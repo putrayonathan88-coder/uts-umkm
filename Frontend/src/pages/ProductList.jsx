@@ -30,7 +30,7 @@ export default function ProductList() {
 
       if (res.data.success) {
         const orderId = res.data.id;
-        const adminNumber = "6281241270177";
+        const adminNumber = "6285243212470";
 
         const text = `
 Pesanan Baru UMKM:
@@ -74,9 +74,6 @@ Terima kasih 🙏
           ))}
         </div>
 
-        {/* ======================= */}
-        {/*        MODAL PESAN      */}
-        {/* ======================= */}
         {selected && (
           <div className="modal">
             <div className="modal-box">

@@ -23,20 +23,35 @@ export default function AdminLogin() {
       });
 
       const data = await res.json();
+      console.log("LOGIN DATA:", data);
 
       if (!res.ok) {
         throw new Error(data.message || "Login gagal");
       }
 
-      // SIMPAN TOKEN DI LOCAL STORAGE
-      localStorage.setItem("adminToken", data.token);
+      // ====== VALIDASI WAJIB ======
+      if (!data.accessToken) {
+        throw new Error("Backend tidak mengirim accessToken");
+      }
+
+      if (!data.refreshToken) {
+        throw new Error("Backend tidak mengirim refreshToken");
+      }
+
+      // ====== SIMPAN TOKEN ======
+      localStorage.setItem("accessToken", data.accessToken);
+      localStorage.setItem("refreshToken", data.refreshToken);
+
+      console.log("TOKEN DISIMPAN:");
+      console.log("accessToken =", localStorage.getItem("accessToken"));
+      console.log("refreshToken =", localStorage.getItem("refreshToken"));
 
       toast.success("Login berhasil!");
-      
-      // ARAHKAN KE HALAMAN ADMIN
+
       navigate("/admin/products");
 
     } catch (error) {
+      console.error(error);
       setErr(error.message);
       toast.error("Login gagal: " + error.message);
     }
@@ -56,6 +71,7 @@ export default function AdminLogin() {
               style={styles.input}
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              required
             />
 
             <label style={styles.label}>Password</label>
@@ -64,6 +80,7 @@ export default function AdminLogin() {
               style={styles.input}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
 
             {err && <div style={styles.error}>{err}</div>}
@@ -87,6 +104,7 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     padding: "20px",
+    position: "relative",
   },
   card: {
     width: "360px",
@@ -104,7 +122,7 @@ const styles = {
   label: {
     textAlign: "left",
     display: "block",
-    margin: "10px 0 5px 0",
+    margin: "10px 0 5px",
     fontWeight: "600",
   },
   input: {

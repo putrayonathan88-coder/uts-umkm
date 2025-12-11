@@ -1,21 +1,46 @@
 const jwt = require("jsonwebtoken");
 
-// NOTE: secret disimpan di kode karena kamu minta tanpa .env
-const JWT_SECRET = "rahasia_jwt_123456"; // ganti kalau mau
+const ACCESS_SECRET = "ACCESS_TOKEN_SECRET_123";
+const REFRESH_SECRET = "REFRESH_SECRET_123";
+
+let refreshTokens = [];
+
+function generateAccessToken(payload) {
+  return jwt.sign(payload, ACCESS_SECRET, { expiresIn: "1m" });
+}
+
+
+function generateRefreshToken(payload) {
+  const token = jwt.sign(payload, REFRESH_SECRET, { expiresIn: "7d" });
+  refreshTokens.push(token);
+  return token;
+}
 
 function authMiddleware(req, res, next) {
   const header = req.headers["authorization"];
-  if (!header) return res.status(401).json({ error: true, message: "No token" });
 
-  const parts = header.split(" ");
-  if (parts.length !== 2 || parts[0] !== "Bearer") return res.status(401).json({ error: true, message: "Invalid token format" });
+  if (!header)
+    return res.status(401).json({ error: true, message: "Token tidak ada" });
 
-  const token = parts[1];
-  jwt.verify(token, JWT_SECRET, (err, payload) => {
-    if (err) return res.status(401).json({ error: true, message: "Invalid token" });
-    req.admin = payload; // payload contains admin info
+  const [bearer, token] = header.split(" ");
+
+  if (bearer !== "Bearer")
+    return res.status(401).json({ error: true, message: "Format token salah" });
+
+  jwt.verify(token, ACCESS_SECRET, (err, payload) => {
+    if (err)
+      return res.status(401).json({ error: true, message: "Token expired / invalid" });
+
+    req.admin = payload;
     next();
   });
 }
 
-module.exports = { authMiddleware, JWT_SECRET };
+module.exports = {
+  authMiddleware,
+  generateAccessToken,
+  generateRefreshToken,
+  refreshTokens,
+  ACCESS_SECRET,
+  REFRESH_SECRET,
+};

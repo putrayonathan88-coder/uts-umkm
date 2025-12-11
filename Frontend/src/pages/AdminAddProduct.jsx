@@ -14,10 +14,10 @@ export default function AdminAddProduct() {
   const [msg, setMsg] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // Cek apakah admin sudah login
+  // CEK LOGIN ADMIN (FIX)
   useEffect(() => {
-    const t = localStorage.getItem("adminToken");
-    if (!t) navigate("/admin/login");
+    const token = localStorage.getItem("accessToken");
+    if (!token) navigate("/admin/login");
   }, []);
 
   const onChange = (e) => {
@@ -33,7 +33,7 @@ export default function AdminAddProduct() {
     setLoading(true);
 
     try {
-      const token = localStorage.getItem("adminToken");
+      const token = localStorage.getItem("accessToken");
       if (!token) {
         setMsg("Unauthorized. Silakan login ulang.");
         navigate("/admin/login");
@@ -49,14 +49,14 @@ export default function AdminAddProduct() {
       const res = await fetch(`${BASE_URL}/products`, {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${token}`, // FIX
         },
         body: fd,
       });
 
       if (res.status === 401) {
         setMsg("Session expired. Login ulang.");
-        localStorage.removeItem("adminToken");
+        localStorage.removeItem("accessToken");
         navigate("/admin/login");
         return;
       }
@@ -78,10 +78,8 @@ export default function AdminAddProduct() {
 
   return (
     <>
-      {/* NAVBAR ADMIN */}
       <AdminNavbar />
 
-      {/* BODY ADMIN */}
       <div className="admin-container" style={{ maxWidth: 700, margin: "50px auto", padding: 20 }}>
         <h2 style={{ marginBottom: 20 }}>Tambah Produk (Admin)</h2>
 
